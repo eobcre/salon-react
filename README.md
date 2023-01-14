@@ -1,1 +1,1 @@
-![salon_logo](https://user-images.githubusercontent.com/88697509/212497017-69500a08-a6c9-420c-bebc-9bd681e2ca30.png)
+![salon-logo](https://user-images.githubusercontent.com/88697509/212497248-e5645a81-53ba-4033-bc3a-7c8a4df4183b.jpg)
