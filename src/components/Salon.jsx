@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Salon = () => {
-  return <div></div>;
+  return <div className='text-4xl'>Salon</div>;
 };
