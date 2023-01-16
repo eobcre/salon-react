@@ -3,26 +3,39 @@ import Logo from '../assets/logo.png';
 
 export const Header = () => {
   return (
-    <div className='w-screen flex justify-between items-center'>
-      <Link to='/'>
-        <img src={Logo} alt='Logo' width='180' height='29' />
-      </Link>
-      <nav>
-        <ul>
+    <nav>
+      <div className='w-10/12 m-auto flex justify-between items-center p-10'>
+        <Link to='/'>
+          <img src={Logo} alt='Logo' width='180' height='29' />
+        </Link>
+
+        <ul className='flex'>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to='/' className='p-4 hover:opacity-50'>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to='/salon'>Salon</Link>
+            <Link to='/salon' className='hover:opacity-50'>
+              Salon
+            </Link>
           </li>
           <li>
-            <Link to='/gallery'>Gallery</Link>
+            <Link to='/gallery' className='p-4 hover:opacity-50'>
+              Gallery
+            </Link>
           </li>
           <li>
-            <Link to='/book'>Book</Link>
+            <Link
+              to='/book'
+              className='bg-gray-300 p-2 rounded-md hover:opacity-50'
+            >
+              Book now
+            </Link>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+      <hr className='w-10/12 m-auto' />
+    </nav>
   );
 };
