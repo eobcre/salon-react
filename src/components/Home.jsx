@@ -1,5 +1,9 @@
-import React from 'react';
+import { Slide } from './Slide';
 
 export const Home = () => {
-  return <div className='text-4xl'>Home</div>;
+  return (
+    <div>
+      <Slide />
+    </div>
+  );
 };
