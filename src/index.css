@@ -5,3 +5,9 @@
 * {
   font-family: 'Times New Roman', Times, serif;
 }
+
+@layer components {
+  .img-st {
+    @apply m-auto p-12;
+  }
+}
