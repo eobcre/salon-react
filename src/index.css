@@ -10,4 +10,8 @@
   .img-st {
     @apply m-auto p-12;
   }
+
+  .title-st {
+    @apply text-4xl text-center p-10;
+  }
 }
