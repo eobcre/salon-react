@@ -6,7 +6,13 @@ export const Footer = () => {
       <div className='flex justify-between w-2/3 m-auto'>
         <div>
           <p className='text-xl mb-6'>Connect with us!</p>
-          <img src={Instagram} alt='Logo' width='40' height='40' />
+          <a
+            href='https://www.instagram.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src={Instagram} alt='Logo' width='40' height='40' />
+          </a>
         </div>
         <div>
           <p className='text-xl mb-6'>Contact</p>
