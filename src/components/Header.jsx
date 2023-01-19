@@ -21,7 +21,12 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to='/gallery' className='p-4 hover:opacity-50'>
+            <Link to='/service' className='p-4 hover:opacity-50'>
+              Service
+            </Link>
+          </li>
+          <li>
+            <Link to='/gallery' className='pr-4 hover:opacity-50'>
               Gallery
             </Link>
           </li>
