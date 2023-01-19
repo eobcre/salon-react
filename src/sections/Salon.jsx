@@ -2,9 +2,9 @@ import Floor from '../assets/salon-floor.jpg';
 
 export const Salon = () => {
   return (
-    <div>
+    <div className='w-10/12 mx-auto'>
       <p className='title-st'>Salon</p>
-      <div className='flex mx-auto w-8/12 mb-10'>
+      <div className='md:flex mx-auto mb-10'>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni
           minus ipsum velit explicabo, suscipit, quis molestias quam assumenda
@@ -21,7 +21,7 @@ export const Salon = () => {
           alt='Image'
           width='320'
           height='240'
-          className='ml-10'
+          className='mt-10 md:-mt-0 md:ml-10'
         />
       </div>
     </div>
