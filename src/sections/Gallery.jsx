@@ -37,7 +37,7 @@ export const Gallery = () => {
         </figure>
         <figure>
           <img src={TheBlonde} alt='Image' width='340' height='420' />
-          <figcaption className='text-center p-4 mb-10'>The Blonde</figcaption>
+          <figcaption className='text-center p-4'>The Blonde</figcaption>
         </figure>
       </div>
     </div>
