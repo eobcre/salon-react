@@ -6,12 +6,18 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
+@font-face {
+  src: url('./assets/Font.woff2') format('woff2');
+  font-family: 'Shadows Into Light';
+  font-display: swap;
+}
+
 @layer components {
   .img-st {
-    @apply m-auto p-12;
+    @apply m-auto p-20;
   }
 
   .title-st {
-    @apply text-4xl text-center p-10;
+    @apply text-4xl text-center p-20;
   }
 }
