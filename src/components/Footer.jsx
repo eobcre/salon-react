@@ -2,7 +2,7 @@ import Instagram from '../assets/ig.png';
 
 export const Footer = () => {
   return (
-    <div className='bg-gray-300 w-full mt-10 pt-10'>
+    <div className='bg-gray-300 w-full mt-20 pt-10'>
       <div className='md:flex justify-between w-2/3 m-auto'>
         <div>
           <p className='text-xl mb-6'>Connect with us!</p>
