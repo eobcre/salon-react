@@ -33,7 +33,7 @@ export const Header = () => {
           <li>
             <Link
               to='/book'
-              className='bg-gray-300 p-2 rounded-md hover:opacity-50'
+              className='border border-gray-300 rounded p-3 hover:bg-gray-100'
             >
               Book now
             </Link>
