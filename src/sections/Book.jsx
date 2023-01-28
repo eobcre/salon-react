@@ -1,6 +1,24 @@
+import { useState } from 'react';
+
 import Image from '../assets/flower.jpg';
 
 export const Book = () => {
+  // Checkbox
+  const [isChecked, setIsChecked] = useState(false);
+  // Total
+  const [total, setTotal] = useState(0);
+
+  // Checkbox function
+  const handleClick = () => {
+    setPrice(!isChecked);
+  };
+
+  // setIsChecked()
+
+  // Total function
+
+  // setTotal()
+
   return (
     <div>
       <p className='title-st'>Booking</p>
@@ -67,27 +85,32 @@ export const Book = () => {
             {/* Services */}
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Services</legend>
+              {/* Haircut - Checkbox */}
               <div className='w-80'>
-                <input type='checkbox' />
-                <label htmlFor='haircut' className='p-2'>
+                <input type='checkbox' className='accent-gray-500' />
+                <label htmlFor='' className='p-2 text-gray-500'>
                   Haircut
                 </label>
               </div>
+
+              {/* Treatment - Checkbox */}
               <div>
-                <input type='checkbox' />
-                <label htmlFor='treatment' className='p-2'>
+                <input type='checkbox' className='accent-gray-500' />
+                <label htmlFor='treatment' className='p-2 text-gray-500'>
                   Treatment
                 </label>
               </div>
+              {/* Color - Checkbox */}
               <div>
-                <input type='checkbox' />
-                <label htmlFor='color' className='p-2'>
+                <input type='checkbox' className='accent-gray-500' />
+                <label htmlFor='color' className='p-2 text-gray-500'>
                   Color
                 </label>
               </div>
+              {/* Massage - Checkbox */}
               <div>
-                <input type='checkbox' />
-                <label htmlFor='haircut' className='p-2'>
+                <input type='checkbox' className='accent-gray-500' />
+                <label htmlFor='haircut' className='p-2 text-gray-500'>
                   Massage
                 </label>
               </div>
