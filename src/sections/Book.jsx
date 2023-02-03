@@ -3,30 +3,46 @@ import { useState } from 'react';
 import Image from '../assets/flower.jpg';
 
 export const Book = () => {
+  const priceList = [
+    {
+      service: 'Haircut',
+      price: 50,
+    },
+    {
+      service: 'Treatment',
+      price: 50,
+    },
+  ];
   // Checkbox
-  const [isChecked, setIsChecked] = useState(false);
+  const [checked, setChecked] = useState(
+    new Array(priceList.length).fill(false)
+  );
   // Total
   const [total, setTotal] = useState(0);
 
   // Checkbox function
-  const handleClick = () => {
-    setPrice(!isChecked);
+  const toggle = () => {
+    setChecked(!checked);
   };
 
   // setIsChecked()
 
   // Total function
+  // const totalCal = () => {};
 
   // setTotal()
+  // setTotal(totalCal);
 
   return (
     <div>
       <p className='title-st'>Booking</p>
       <p className='text-center mb-20'>
-        Book your appointment with CAIT SALON. We will get back to you shortly.
+        Book your appointment with CAIT SALON.
+        <br />
+        We will get back to you shortly.
       </p>
-      <div className='flex justify-center gap-40'>
-        <div>
+      <div className='-mx-0 p-10 md:flex md:mx-36'>
+        <div className='flex-1'>
           <form>
             {/* Name */}
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
@@ -85,52 +101,56 @@ export const Book = () => {
             {/* Services */}
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Services</legend>
-              {/* Haircut - Checkbox */}
-              <div className='w-80'>
-                <input type='checkbox' className='accent-gray-500' />
-                <label htmlFor='' className='p-2 text-gray-500'>
-                  Haircut
+
+              {/* <div className='w-80'>
+                <input
+                  type='checkbox'
+                  checked={checked}
+                  onChange={toggle}
+                  className='accent-gray-500'
+                />
+                <label htmlFor='input' className='p-2 text-gray-500'>
+                  Haircut {checked ? 'checked' : 'un-checked'}.
                 </label>
               </div>
 
-              {/* Treatment - Checkbox */}
               <div>
                 <input type='checkbox' className='accent-gray-500' />
                 <label htmlFor='treatment' className='p-2 text-gray-500'>
                   Treatment
                 </label>
               </div>
-              {/* Color - Checkbox */}
+
               <div>
                 <input type='checkbox' className='accent-gray-500' />
                 <label htmlFor='color' className='p-2 text-gray-500'>
                   Color
                 </label>
               </div>
-              {/* Massage - Checkbox */}
+
               <div>
                 <input type='checkbox' className='accent-gray-500' />
                 <label htmlFor='haircut' className='p-2 text-gray-500'>
                   Massage
                 </label>
-              </div>
+              </div> */}
             </fieldset>
           </form>
           <button
-            className='border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-100'
+            className='table mx-auto border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-100'
             type='submit'
           >
             Send
           </button>
         </div>
 
-        <div>
+        <div className='flex-1'>
           <img
             src={Image}
             alt='Image'
             width='300'
             height='440'
-            className='hidden md:block'
+            className='hidden md:block float-right'
           />
         </div>
       </div>
