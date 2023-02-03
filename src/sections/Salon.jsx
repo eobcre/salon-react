@@ -25,14 +25,7 @@ export const Salon = () => {
           className='mt-10 md:-mt-0 md:ml-10'
         />
       </div>
-      <div className='md:flex mx-auto mb-10'>
-        <img
-          src={Pink}
-          alt='Image'
-          width='320'
-          height='240'
-          className='mt-10 md:-mt-0 md:mr-10'
-        />
+      <div className='md:flex mx-auto mt-24'>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut cum
           aperiam exercitationem accusamus voluptate ratione, numquam corporis
@@ -44,6 +37,13 @@ export const Salon = () => {
           ipsam quisquam vitae harum officiis aperiam reprehenderit dolore
           recusandae itaque. Dolore, molestiae autem.
         </p>
+        <img
+          src={Pink}
+          alt='Image'
+          width='320'
+          height='240'
+          className='mt-10 md:-mt-0 md:ml-10'
+        />
       </div>
     </div>
   );
