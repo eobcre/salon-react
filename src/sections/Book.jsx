@@ -60,6 +60,7 @@ export const Book = () => {
     setTotal(totalPrice);
   };
 
+  // JSX
   return (
     <div>
       <p className='title-st'>Booking</p>
@@ -111,29 +112,15 @@ export const Book = () => {
               </div>
             </fieldset>
 
-            {/* Stylist */}
-            {/* <fieldset className='border border-solid rounded border-gray-300 p-3'>
-              <legend className='p-1'>Stylist</legend>
-              <select
-                className='w-80 outline-none text-gray-500'
-                name='stylits'
-              >
-                <option value=''>- - - Select Stylist - - -</option>
-                <option value='new'>New Talent</option>
-                <option value='stylist'>Stylist</option>
-                <option value='lead'>Lead Stylist</option>
-              </select>
-            </fieldset> */}
-
             {/* Services */}
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Services</legend>
 
-              <ul className=''>
+              <ul>
                 {list.map(({ name, price }, index) => {
                   return (
-                    <li key={index}>
-                      <div>
+                    <li key={index} className='flex justify-between'>
+                      <div className='p-1'>
                         <input
                           type='checkbox'
                           checked={checked[index]}
@@ -142,21 +129,24 @@ export const Book = () => {
                           name={name}
                           value={name}
                         />
-                        <label htmlFor={`linked-${index}`}>{name}</label>
+                        <label htmlFor={`linked-${index}`} className='p-1'>
+                          {name}
+                        </label>
                       </div>
                       <div>{getTotalPrice(price)}</div>
                     </li>
                   );
                 })}
                 <li>
-                  <div>
-                    <p>Total:</p>
-                    <div>{getTotalPrice(total)}</div>
+                  <div className='flex justify-between'>
+                    <p className='p-6'>Total:</p>
+                    <div className='p-6'>{getTotalPrice(total)}</div>
                   </div>
                 </li>
               </ul>
             </fieldset>
           </form>
+          {/* Send button */}
           <button
             className='table mx-auto border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-100'
             type='submit'
@@ -165,6 +155,7 @@ export const Book = () => {
           </button>
         </div>
 
+        {/* Image */}
         <div className='flex-1'>
           <img
             src={Image}
