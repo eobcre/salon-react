@@ -1,37 +1,55 @@
 import { useState } from 'react';
-
 import Image from '../assets/flower.jpg';
 
+const getTotalPrice = (price) => `$${price.toFixed(2)} +`;
+
 export const Book = () => {
-  const priceList = [
+  const list = [
     {
-      service: 'Haircut',
+      name: 'Haircut',
       price: 50,
     },
     {
-      service: 'Treatment',
+      name: 'Treatment',
+      price: 50,
+    },
+    {
+      name: 'Color',
+      price: 70,
+    },
+    {
+      name: 'Head Spa',
       price: 50,
     },
   ];
-  // Checkbox
-  const [checked, setChecked] = useState(
-    new Array(priceList.length).fill(false)
-  );
-  // Total
+
+  // useState
+  const [checked, setChecked] = useState(new Array(list.length).fill(false));
   const [total, setTotal] = useState(0);
 
   // Checkbox function
-  const toggle = () => {
-    setChecked(!checked);
+  const toggle = (place) => {
+    const updatedChecked = checked.map((item, index) => {
+      if (index === place) {
+        return !item;
+      } else {
+        return item;
+      }
+    });
+
+    setChecked(updatedChecked);
+
+    // Total function
+    const initialValue = 0;
+    const totalPrice = updatedChecked.reduce((acc, currentTorF, index) => {
+      if (currentTorF === true) {
+        return acc + list[index].price;
+      }
+      return acc;
+    }, initialValue);
+
+    setTotal(totalPrice);
   };
-
-  // setIsChecked()
-
-  // Total function
-  // const totalCal = () => {};
-
-  // setTotal()
-  // setTotal(totalCal);
 
   return (
     <div>
@@ -102,38 +120,32 @@ export const Book = () => {
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Services</legend>
 
-              {/* <div className='w-80'>
-                <input
-                  type='checkbox'
-                  checked={checked}
-                  onChange={toggle}
-                  className='accent-gray-500'
-                />
-                <label htmlFor='input' className='p-2 text-gray-500'>
-                  Haircut {checked ? 'checked' : 'un-checked'}.
-                </label>
-              </div>
-
-              <div>
-                <input type='checkbox' className='accent-gray-500' />
-                <label htmlFor='treatment' className='p-2 text-gray-500'>
-                  Treatment
-                </label>
-              </div>
-
-              <div>
-                <input type='checkbox' className='accent-gray-500' />
-                <label htmlFor='color' className='p-2 text-gray-500'>
-                  Color
-                </label>
-              </div>
-
-              <div>
-                <input type='checkbox' className='accent-gray-500' />
-                <label htmlFor='haircut' className='p-2 text-gray-500'>
-                  Massage
-                </label>
-              </div> */}
+              <ul className=''>
+                {list.map(({ name, price }, index) => {
+                  return (
+                    <li key={index}>
+                      <div>
+                        <input
+                          type='checkbox'
+                          checked={checked[index]}
+                          onChange={() => toggle(index)}
+                          id={`linked-${index}`}
+                          name={name}
+                          value={name}
+                        />
+                        <label htmlFor={`linked-${index}`}>{name}</label>
+                      </div>
+                      <div>{getTotalPrice(price)}</div>
+                    </li>
+                  );
+                })}
+                <li>
+                  <div>
+                    <p>Total:</p>
+                    <div>{getTotalPrice(total)}</div>
+                  </div>
+                </li>
+              </ul>
             </fieldset>
           </form>
           <button
