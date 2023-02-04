@@ -5,7 +5,7 @@ export const Service = () => {
       <div className='w-3/4 mx-auto'>
         {/* Haircut */}
         <div className='p-10'>
-          <p className='text-2xl font-bold'>Haircut</p>
+          <p className='text-2xl font-bold mb-6'>Haircut</p>
           <ul>
             <li>
               <span>Haircut</span>
@@ -30,9 +30,11 @@ export const Service = () => {
           </ul>
         </div>
 
+        <hr />
+
         {/* Color */}
         <div className='p-10'>
-          <p className='text-2xl font-bold'>Color</p>
+          <p className='text-2xl font-bold mb-6'>Color</p>
           <ul>
             <li>
               <span>Color</span>
@@ -49,9 +51,11 @@ export const Service = () => {
           </ul>
         </div>
 
+        <hr />
+
         {/* Others */}
         <div className='p-10'>
-          <p className='text-2xl font-bold'>Others</p>
+          <p className='text-2xl font-bold mb-6'>Others</p>
           <ul>
             <li>
               <span>Treatment</span>
