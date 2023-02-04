@@ -139,7 +139,7 @@ export const Book = () => {
                 })}
                 <li>
                   <div className='flex justify-between'>
-                    <p className='p-6'>Total:</p>
+                    <p className='p-6'>Service Price:</p>
                     <div className='p-6'>{getTotalPrice(total)}</div>
                   </div>
                 </li>
