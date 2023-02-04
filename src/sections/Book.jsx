@@ -10,15 +10,24 @@ export const Book = () => {
       price: 50,
     },
     {
+      name: 'Color',
+      price: 60,
+    },
+    {
+      name: 'Design Color',
+      price: 80,
+    },
+
+    {
       name: 'Treatment',
       price: 50,
     },
     {
-      name: 'Color',
-      price: 70,
+      name: 'Head Spa',
+      price: 50,
     },
     {
-      name: 'Head Spa',
+      name: 'Hair Set',
       price: 50,
     },
   ];
@@ -103,7 +112,7 @@ export const Book = () => {
             </fieldset>
 
             {/* Stylist */}
-            <fieldset className='border border-solid rounded border-gray-300 p-3'>
+            {/* <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Stylist</legend>
               <select
                 className='w-80 outline-none text-gray-500'
@@ -114,7 +123,7 @@ export const Book = () => {
                 <option value='stylist'>Stylist</option>
                 <option value='lead'>Lead Stylist</option>
               </select>
-            </fieldset>
+            </fieldset> */}
 
             {/* Services */}
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
