@@ -8,58 +8,62 @@ export const Service = () => {
           <p className='text-2xl font-bold'>Haircut</p>
           <ul>
             <li>
-              <span>Haircut - New Talent</span>
-              <span className='float-right'>$50.00</span>
+              <span>Haircut</span>
+              <span className='float-right'>$50.00 +</span>
             </li>
             <li>
-              <span>Haircut - Stylist</span>
-              <span className='float-right'>$50.00</span>
+              <span>Haircut + Color</span>
+              <span className='float-right'>$110.00 +</span>
             </li>
             <li>
-              <span>Haircut - Lead Stlist</span>
-              <span className='float-right'>$50.00</span>
+              <span>Haircut + Treatment</span>
+              <span className='float-right'>$100.00 +</span>
             </li>
             <li>
-              <span>Haircut + Scalp Teatment - New Talent</span>
-              <span className='float-right'>$50.00</span>
+              <span>Haircut + Color + Treatment </span>
+              <span className='float-right'>$160.00 +</span>
             </li>
             <li>
-              <span>Haircut + Scalp Teatment - Stylist</span>
-              <span className='float-right'>$50.00</span>
-            </li>
-            <li>
-              <span>Haircut + Scalp Teatment - Lead Stylist</span>
-              <span className='float-right'>$50.00</span>
+              <span>Haircut + Head Spa </span>
+              <span className='float-right'>$100.00 +</span>
             </li>
           </ul>
         </div>
+
         {/* Color */}
         <div className='p-10'>
           <p className='text-2xl font-bold'>Color</p>
           <ul>
             <li>
-              <span>Full Head Color Service- </span>
-              <span className='float-right'>$70.00 +</span>
+              <span>Color</span>
+              <span className='float-right'>$60.00 +</span>
             </li>
             <li>
-              <span>Full Head Highlights Service</span>
-              <span className='float-right'>$70.00 +</span>
+              <span>Design Color</span>
+              <span className='float-right'>$80.00 +</span>
             </li>
             <li>
-              <span>Balayage Color Service</span>
-              <span className='float-right'>$70.00 +</span>
+              <span>Retouch</span>
+              <span className='float-right'>$80.00 +</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Others */}
+        <div className='p-10'>
+          <p className='text-2xl font-bold'>Others</p>
+          <ul>
+            <li>
+              <span>Treatment</span>
+              <span className='float-right'>$50.00 +</span>
             </li>
             <li>
-              <span>Foilyage Color Service</span>
-              <span className='float-right'>$70.00 +</span>
+              <span>Head Spa</span>
+              <span className='float-right'>$50.00 +</span>
             </li>
             <li>
-              <span>Bleach Retouch Service</span>
-              <span className='float-right'>$70.00 +</span>
-            </li>
-            <li>
-              <span>Bleach Service, Roots to Ends</span>
-              <span className='float-right'>$70.00 +</span>
+              <span>Hair Set</span>
+              <span className='float-right'>$50.00 +</span>
             </li>
           </ul>
         </div>
