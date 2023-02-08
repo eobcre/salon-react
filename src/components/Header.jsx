@@ -13,7 +13,7 @@ export const Header = () => {
   // JSX
   return (
     <nav>
-      <div className='w-10/12 m-auto flex justify-between items-center p-10'>
+      <div className='w-10/12 m-auto border-b border-gray-200 flex justify-between items-center p-10'>
         <Link to='/'>
           <img src={Logo} alt='Logo' width='180' height='29' />
         </Link>
@@ -56,7 +56,6 @@ export const Header = () => {
           </li>
         </ul>
       </div>
-      <hr className='w-10/12 m-auto' />
     </nav>
   );
 };
