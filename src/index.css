@@ -14,7 +14,7 @@
 
 @layer components {
   .img-st {
-    @apply m-auto p-20;
+    @apply m-auto my-10;
   }
 
   .title-st {
