@@ -69,7 +69,7 @@ export const Book = () => {
         <br />
         We will get back to you shortly.
       </p>
-      <div className='-mx-0 p-10 md:flex md:mx-36'>
+      <div className='mx-2 md:flex md:mx-36'>
         <div className='flex-1'>
           <form>
             {/* Name */}
