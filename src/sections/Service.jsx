@@ -2,7 +2,7 @@ export const Service = () => {
   return (
     <div>
       <p className='title-st'>Service</p>
-      <div className='w-3/4 mx-auto'>
+      <div className='mx-auto md:w-3/4'>
         {/* Haircut */}
         <div className='p-10'>
           <p className='text-2xl font-bold mb-6'>Haircut</p>
