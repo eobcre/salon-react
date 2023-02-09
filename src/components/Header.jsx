@@ -34,28 +34,45 @@ export const Header = () => {
         >
           <ul className='grid grid-cols-2 place-items-center gap-4 md:flex'>
             <li>
-              <Link to='/' className='hover:opacity-50 md:p-4'>
+              <Link
+                to='/'
+                onClick={handleToggle}
+                className='hover:opacity-50 md:p-4'
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to='/salon' className='hover:opacity-50'>
+              <Link
+                to='/salon'
+                onClick={handleToggle}
+                className='hover:opacity-50'
+              >
                 Salon
               </Link>
             </li>
             <li>
-              <Link to='/service' className='hover:opacity-50 md:p-4'>
+              <Link
+                to='/service'
+                onClick={handleToggle}
+                className='hover:opacity-50 md:p-4'
+              >
                 Service
               </Link>
             </li>
             <li>
-              <Link to='/gallery' className='hover:opacity-50 md:pr-4'>
+              <Link
+                to='/gallery'
+                onClick={handleToggle}
+                className='hover:opacity-50 md:pr-4'
+              >
                 Gallery
               </Link>
             </li>
             <li className='mt-2 md:mt-0'>
               <Link
                 to='/book'
+                onClick={handleToggle}
                 className='border border-gray-300 rounded p-3 hover:bg-gray-100'
               >
                 Book now
