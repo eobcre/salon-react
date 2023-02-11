@@ -191,6 +191,7 @@ export const Book = () => {
                 name='total'
                 value={getTotalPrice(total)}
                 className='w-16 border-none outline-none'
+                readOnly
               />
             </fieldset>
 
