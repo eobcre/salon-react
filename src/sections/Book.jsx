@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import EmailJS from '@emailjs/browser'; // EmailJS
+// EmailJS
+import EmailJS from '@emailjs/browser';
 import Image from '../assets/flower.jpg';
-
-const getTotalPrice = (price) => `$${price.toFixed(2)} +`;
 
 export const Book = () => {
   // EmailJS
@@ -80,6 +79,10 @@ export const Book = () => {
     }, initialValue);
 
     setTotal(totalPrice);
+  };
+
+  const getTotalPrice = (price) => {
+    return `$${price.toFixed(2)} +`;
   };
 
   // JSX
@@ -178,15 +181,19 @@ export const Book = () => {
                     </li>
                   );
                 })}
-                <li>
-                  <div className='flex justify-between'>
-                    <p className='p-6'>Service Price:</p>
-                    <div className='p-6'>{getTotalPrice(total)}</div>
-                  </div>
-                </li>
               </ul>
             </fieldset>
-            {/* Total */}
+
+            <fieldset className='flex justify-between p-8'>
+              <label htmlFor='total'>Price</label>
+              <input
+                type='text'
+                name='total'
+                value={getTotalPrice(total)}
+                className='w-16 border-none outline-none'
+              />
+            </fieldset>
+
             {/* Send button */}
             <button
               className='table mx-auto border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-100'
