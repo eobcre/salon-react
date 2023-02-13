@@ -1,10 +1,69 @@
-import { useState } from 'react';
-// EmailJS
+import { useState, useMemo } from 'react';
+// emailjs
 import EmailJS from '@emailjs/browser';
+// sweetalert2
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import Image from '../assets/flower.jpg';
 
 export const Book = () => {
-  // EmailJS
+  const [list, setList] = useState([
+    // Service list, set to unchecked
+    {
+      name: 'Haircut',
+      price: 50,
+      checked: false,
+    },
+    {
+      name: 'Color',
+      price: 60,
+      checked: false,
+    },
+    {
+      name: 'Design Color',
+      price: 80,
+      checked: false,
+    },
+    {
+      name: 'Treatment',
+      price: 50,
+      checked: false,
+    },
+    {
+      name: 'Head Spa',
+      price: 50,
+      checked: false,
+    },
+    {
+      name: 'Hair Set',
+      price: 50,
+      checked: false,
+    },
+  ]);
+
+  // Calculate
+  const total = useMemo(() => {
+    const initialValue = 0;
+    return list.reduce((acc, cur) => {
+      // console.log('acc', acc, 'cur', cur);
+      if (cur.checked === true) {
+        acc += cur.price;
+      }
+      return acc;
+    }, initialValue);
+  });
+
+  // Reset
+  const resetForm = () => {
+    setList((prevState) =>
+      prevState.map((listItem) => ({
+        ...listItem,
+        checked: false,
+      }))
+    );
+  };
+
+  // Email JS
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -22,72 +81,35 @@ export const Book = () => {
       }
     );
     e.target.reset();
-  };
+    resetForm();
 
-  // Checkbox
-  const list = [
-    {
-      name: 'Haircut',
-      price: 50,
-    },
-    {
-      name: 'Color',
-      price: 60,
-    },
-    {
-      name: 'Design Color',
-      price: 80,
-    },
+    // Alert
+    const MySwal = withReactContent(Swal);
 
-    {
-      name: 'Treatment',
-      price: 50,
-    },
-    {
-      name: 'Head Spa',
-      price: 50,
-    },
-    {
-      name: 'Hair Set',
-      price: 50,
-    },
-  ];
-
-  // useState
-  const [checked, setChecked] = useState(new Array(list.length).fill(false));
-  const [total, setTotal] = useState(0);
-
-  // Checkbox
-  const toggle = (place) => {
-    const updatedChecked = checked.map((item, index) => {
-      if (index === place) {
-        return !item;
-      } else {
-        return item;
-      }
+    MySwal.fire({
+      title: 'Thank you!',
+      text: 'We have received your request.',
+      icon: 'success',
     });
-
-    setChecked(updatedChecked);
-
-    // Total
-    const initialValue = 0;
-    const totalPrice = updatedChecked.reduce((acc, currentTorF, index) => {
-      if (currentTorF === true) {
-        return acc + list[index].price;
-      }
-      return acc;
-    }, initialValue);
-
-    setTotal(totalPrice);
   };
 
+  const toggle = (toggleIndex) => {
+    setList((prevState) =>
+      prevState.map((listItem, index) => ({
+        ...listItem,
+        checked: toggleIndex === index ? !listItem.checked : listItem.checked,
+      }))
+    );
+  };
+
+  // Display total price
   const getTotalPrice = (price) => {
-    return `$${price.toFixed(2)} +`;
+    return `$${price.toFixed(2)} `;
   };
 
   // JSX
   return (
-    <div>
+    <>
       <p className='title-st'>Booking</p>
       <p className='text-center mb-20'>
         Book your appointment with CAIT SALON.
@@ -101,9 +123,10 @@ export const Book = () => {
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Name</legend>
               <input
-                className='w-80 outline-none text-gray-500'
+                className='outline-none text-gray-500'
                 type='text'
                 name='name'
+                size='50'
                 autoComplete='off'
                 required
               />
@@ -113,9 +136,12 @@ export const Book = () => {
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Number</legend>
               <input
-                className='w-80 outline-none text-gray-500'
+                className='outline-none text-gray-500'
                 type='text'
                 name='number'
+                size='50'
+                pattern='^[0-9-]+$'
+                inputMode='numeric'
                 autoComplete='off'
                 required
               />
@@ -125,9 +151,10 @@ export const Book = () => {
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Email</legend>
               <input
-                className='w-80 outline-none text-gray-500'
-                type='mail'
+                className='outline-none text-gray-500'
+                type='email'
                 name='email'
+                size='50'
                 autoComplete='off'
                 required
               />
@@ -137,7 +164,7 @@ export const Book = () => {
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Salon Location</legend>
               <select
-                className='w-80 outline-none text-gray-500'
+                className='outline-none text-gray-500'
                 name='location'
                 required
               >
@@ -151,7 +178,7 @@ export const Book = () => {
             {/* Date */}
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
               <legend className='p-1'>Date</legend>
-              <div className='w-80 text-gray-500'>
+              <div className='text-gray-500'>
                 <input type='date' name='date' required />
               </div>
             </fieldset>
@@ -161,13 +188,13 @@ export const Book = () => {
               <legend className='p-1'>Services</legend>
 
               <ul>
-                {list.map(({ name, price }, index) => {
+                {list.map(({ name, price, checked }, index) => {
                   return (
                     <li key={index} className='flex justify-between'>
                       <div className='p-1'>
                         <input
                           type='checkbox'
-                          checked={checked[index]}
+                          checked={checked}
                           onChange={() => toggle(index)}
                           id={`linked-${index}`}
                           name='services'
@@ -197,7 +224,7 @@ export const Book = () => {
 
             {/* Send button */}
             <button
-              className='table mx-auto border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-100'
+              className='table mx-auto border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-300'
               type='submit'
             >
               Send
@@ -216,6 +243,15 @@ export const Book = () => {
           />
         </div>
       </div>
-    </div>
+
+      {/* Alert */}
+      <div className='hidden bg-blue-300'>
+        <p className='flex justify-center items-center'>
+          Thank you for your appointment.
+          <br />
+          We will get back to you shortly.
+        </p>
+      </div>
+    </>
   );
 };
