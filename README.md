@@ -7,6 +7,8 @@
 - Vite
 - Tailwind
 - react-swipeable-views
+- @emailjs/browser
+- sweetalert2
 
 ## Run Locally
 
