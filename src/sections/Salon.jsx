@@ -25,7 +25,7 @@ export const Salon = () => {
           className='flex justify-between mt-10 ml-0 md:mt-0 md:ml-28'
         />
       </div>
-      <div className='md:flex mx-auto mt-24'>
+      <div className='mt-24 md:flex flex-row-reverse'>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut cum
           aperiam exercitationem accusamus voluptate ratione, numquam corporis
@@ -42,7 +42,7 @@ export const Salon = () => {
           alt='Image'
           width='320'
           height='240'
-          className='mt-10 ml-0 md:flex justify-between md:mt-0 md:ml-28'
+          className='mt-10 md:flex justify-between md:mt-0 mr-28'
         />
       </div>
     </div>
