@@ -5,7 +5,7 @@ export const Salon = () => {
   return (
     <div className='w-10/12 mx-auto'>
       <p className='title-st'>Salon</p>
-      <div className='md:flex mx-auto mb-10'>
+      <div className='md:flex items-start mx-auto mb-10'>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni
           minus ipsum velit explicabo, suscipit, quis molestias quam assumenda
@@ -25,7 +25,7 @@ export const Salon = () => {
           className='flex justify-between mt-10 ml-0 md:mt-0 md:ml-28'
         />
       </div>
-      <div className='mt-24 md:flex flex-row-reverse'>
+      <div className='mt-24 md:flex items-start flex-row-reverse'>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut cum
           aperiam exercitationem accusamus voluptate ratione, numquam corporis
