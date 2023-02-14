@@ -116,8 +116,8 @@ export const Book = () => {
         <br />
         We will get back to you shortly.
       </p>
-      <div className='mx-2 md:flex md:mx-36'>
-        <div className='flex-1'>
+      <div className='mx-2 md:flex justify-between md:mx-36'>
+        <div>
           <form onSubmit={sendEmail} required>
             {/* Name */}
             <fieldset className='border border-solid rounded border-gray-300 p-3'>
@@ -233,24 +233,15 @@ export const Book = () => {
         </div>
 
         {/* Image */}
-        <div className='flex-1'>
+        <div className='shrink-0'>
           <img
             src={Image}
             alt='Image'
-            width='300'
+            width='330'
             height='440'
-            className='hidden md:block float-right mt-15px'
+            className='hidden md:block mt-15px'
           />
         </div>
-      </div>
-
-      {/* Alert */}
-      <div className='hidden bg-blue-300'>
-        <p className='flex justify-center items-center'>
-          Thank you for your appointment.
-          <br />
-          We will get back to you shortly.
-        </p>
       </div>
     </>
   );
