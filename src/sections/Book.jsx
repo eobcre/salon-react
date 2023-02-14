@@ -117,120 +117,118 @@ export const Book = () => {
         We will get back to you shortly.
       </p>
       <div className='mx-2 md:flex justify-between md:mx-36'>
-        <div>
-          <form onSubmit={sendEmail} required>
-            {/* Name */}
-            <fieldset className='border border-solid rounded border-gray-300 p-3'>
-              <legend className='p-1'>Name</legend>
-              <input
-                className='outline-none text-gray-500'
-                type='text'
-                name='name'
-                size='50'
-                autoComplete='off'
-                required
-              />
-            </fieldset>
+        <form onSubmit={sendEmail} required>
+          {/* Name */}
+          <fieldset className='border border-solid rounded border-gray-300 p-3'>
+            <legend className='p-1'>Name</legend>
+            <input
+              className='outline-none text-gray-500'
+              type='text'
+              name='name'
+              size='50'
+              autoComplete='off'
+              required
+            />
+          </fieldset>
 
-            {/* Number */}
-            <fieldset className='border border-solid rounded border-gray-300 p-3'>
-              <legend className='p-1'>Number</legend>
-              <input
-                className='outline-none text-gray-500'
-                type='text'
-                name='number'
-                size='50'
-                pattern='^[0-9-]+$'
-                inputMode='numeric'
-                autoComplete='off'
-                required
-              />
-            </fieldset>
+          {/* Number */}
+          <fieldset className='border border-solid rounded border-gray-300 p-3'>
+            <legend className='p-1'>Number</legend>
+            <input
+              className='outline-none text-gray-500'
+              type='text'
+              name='number'
+              size='50'
+              pattern='^[0-9-]+$'
+              inputMode='numeric'
+              autoComplete='off'
+              required
+            />
+          </fieldset>
 
-            {/* Email */}
-            <fieldset className='border border-solid rounded border-gray-300 p-3'>
-              <legend className='p-1'>Email</legend>
-              <input
-                className='outline-none text-gray-500'
-                type='email'
-                name='email'
-                size='50'
-                autoComplete='off'
-                required
-              />
-            </fieldset>
+          {/* Email */}
+          <fieldset className='border border-solid rounded border-gray-300 p-3'>
+            <legend className='p-1'>Email</legend>
+            <input
+              className='outline-none text-gray-500'
+              type='email'
+              name='email'
+              size='50'
+              autoComplete='off'
+              required
+            />
+          </fieldset>
 
-            {/* Location */}
-            <fieldset className='border border-solid rounded border-gray-300 p-3'>
-              <legend className='p-1'>Salon Location</legend>
-              <select
-                className='outline-none text-gray-500'
-                name='location'
-                required
-              >
-                <option>Select Location</option>
-                <option name='location'>Rochester</option>
-                <option name='location'>Beaver</option>
-                <option name='location'>Pittsburgh</option>
-              </select>
-            </fieldset>
-
-            {/* Date */}
-            <fieldset className='border border-solid rounded border-gray-300 p-3'>
-              <legend className='p-1'>Date</legend>
-              <div className='text-gray-500'>
-                <input type='date' name='date' required />
-              </div>
-            </fieldset>
-
-            {/* Services */}
-            <fieldset className='border border-solid rounded border-gray-300 p-3'>
-              <legend className='p-1'>Services</legend>
-
-              <ul>
-                {list.map(({ name, price, checked }, index) => {
-                  return (
-                    <li key={index} className='flex justify-between'>
-                      <div className='p-1'>
-                        <input
-                          type='checkbox'
-                          checked={checked}
-                          onChange={() => toggle(index)}
-                          id={`linked-${index}`}
-                          name='services'
-                          value={name}
-                        />
-                        <label htmlFor={`linked-${index}`} className='p-1'>
-                          {name}
-                        </label>
-                      </div>
-                      <div>{getTotalPrice(price)}</div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </fieldset>
-
-            <fieldset className='flex justify-between p-8'>
-              <label htmlFor='total'>Price</label>
-              <input
-                type='text'
-                name='total'
-                value={getTotalPrice(total)}
-                className='w-16 border-none outline-none'
-                readOnly
-              />
-            </fieldset>
-
-            {/* Send button */}
-            <button
-              className='table mx-auto border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-300'
-              type='submit'
+          {/* Location */}
+          <fieldset className='border border-solid rounded border-gray-300 p-3'>
+            <legend className='p-1'>Salon Location</legend>
+            <select
+              className='outline-none text-gray-500'
+              name='location'
+              required
             >
-              Send
-            </button>
-          </form>
-        </div>
+              <option>Select Location</option>
+              <option name='location'>Rochester</option>
+              <option name='location'>Beaver</option>
+              <option name='location'>Pittsburgh</option>
+            </select>
+          </fieldset>
+
+          {/* Date */}
+          <fieldset className='border border-solid rounded border-gray-300 p-3'>
+            <legend className='p-1'>Date</legend>
+            <div className='text-gray-500'>
+              <input type='date' name='date' required />
+            </div>
+          </fieldset>
+
+          {/* Services */}
+          <fieldset className='border border-solid rounded border-gray-300 p-3'>
+            <legend className='p-1'>Services</legend>
+
+            <ul>
+              {list.map(({ name, price, checked }, index) => {
+                return (
+                  <li key={index} className='flex justify-between'>
+                    <div className='p-1'>
+                      <input
+                        type='checkbox'
+                        checked={checked}
+                        onChange={() => toggle(index)}
+                        id={`linked-${index}`}
+                        name='services'
+                        value={name}
+                      />
+                      <label htmlFor={`linked-${index}`} className='p-1'>
+                        {name}
+                      </label>
+                    </div>
+                    <div>{getTotalPrice(price)}</div>
+                  </li>
+                );
+              })}
+            </ul>
+          </fieldset>
+
+          <fieldset className='flex justify-between p-8'>
+            <label htmlFor='total'>Price</label>
+            <input
+              type='text'
+              name='total'
+              value={getTotalPrice(total)}
+              className='w-16 border-none outline-none'
+              readOnly
+            />
+          </fieldset>
+
+          {/* Send button */}
+          <button
+            className='table mx-auto border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-300'
+            type='submit'
+          >
+            Send
+          </button>
+        </form>
 
         {/* Image */}
         <div className='shrink-0'>
