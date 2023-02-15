@@ -102,7 +102,7 @@ export const Book = () => {
     );
   };
 
-  // Display total price
+  // Convert to decimal point
   const getTotalPrice = (price) => {
     return `$${price.toFixed(2)} `;
   };
@@ -195,11 +195,10 @@ export const Book = () => {
                         type='checkbox'
                         checked={checked}
                         onChange={() => toggle(index)}
-                        id={`linked-${index}`}
+                        id={`linked ${index}`}
                         name='services'
-                        value={name}
                       />
-                      <label htmlFor={`linked-${index}`} className='p-1'>
+                      <label htmlFor={`linked ${index}`} className='p-1'>
                         {name}
                       </label>
                     </div>
