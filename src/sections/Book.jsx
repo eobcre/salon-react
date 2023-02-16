@@ -93,6 +93,7 @@ export const Book = () => {
     });
   };
 
+  // Checkbox toggle
   const toggle = (toggleIndex) => {
     setList((prevState) =>
       prevState.map((listItem, index) => ({
