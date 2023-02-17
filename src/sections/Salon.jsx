@@ -1,3 +1,4 @@
+// img
 import Floor from '../assets/salon-floor.jpg';
 import Pink from '../assets/pink-hair.jpg';
 

@@ -1,3 +1,4 @@
+// icon
 import Instagram from '../assets/ig.png';
 
 export const Footer = () => {

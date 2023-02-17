@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+// react-icons
 import { GrClose, GrMenu } from 'react-icons/gr';
+// img
 import Logo from '../assets/logo.png';
 
 export const Header = () => {

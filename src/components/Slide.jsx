@@ -1,7 +1,7 @@
 // react-swipeable-views
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-// Images
+// img
 import Img1 from '../assets/img1.jpg';
 import Img2 from '../assets/img2.jpg';
 import Img3 from '../assets/img3.jpg';

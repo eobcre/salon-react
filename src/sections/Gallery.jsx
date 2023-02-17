@@ -1,3 +1,4 @@
+// img
 import Bombshell from '../assets/gallery/bombshell.jpg';
 import Ice from '../assets/gallery/ice.jpg';
 import Precision from '../assets/gallery/precision.jpg';
