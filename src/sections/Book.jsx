@@ -4,6 +4,7 @@ import EmailJS from '@emailjs/browser';
 // sweetalert2
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+// img
 import Image from '../assets/flower.jpg';
 
 export const Book = () => {
