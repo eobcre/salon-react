@@ -44,9 +44,10 @@ export const Book = () => {
 
   // Calculate
   const total = useMemo(() => {
+    console.log('%cuseMemo Render', 'color: green');
     const initialValue = 0;
     return list.reduce((acc, cur) => {
-      // console.log('acc', acc, 'cur', cur);
+      console.log('acc', acc, 'cur', cur);
       if (cur.checked === true) {
         acc += cur.price;
       }
