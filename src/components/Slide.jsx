@@ -1,19 +1,41 @@
-// react-swipeable-views
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+// Swiper
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
 // img
 import Img1 from '../assets/img1.jpg';
 import Img2 from '../assets/img2.jpg';
 import Img3 from '../assets/img3.jpg';
 
+// JSX
 export const Slide = () => {
-  const EnhancedSwipeableViews = autoPlay(SwipeableViews);
-  // JSX
   return (
-    <EnhancedSwipeableViews enableMouseEvents interval={5000}>
-      <img src={Img1} alt='Image' className='img-st' />
-      <img src={Img2} alt='Image' className='img-st' />
-      <img src={Img3} alt='Image' className='img-st' />
-    </EnhancedSwipeableViews>
+    <div className='w-10/12 mx-auto'>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className='mySwiper'
+      >
+        <SwiperSlide>
+          <img src={Img1} alt='Image' className='img-st' />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Img2} alt='Image' className='img-st' />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Img3} alt='Image' className='img-st' />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 };
