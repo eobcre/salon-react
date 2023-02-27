@@ -14,10 +14,16 @@
 
 @layer components {
   .img-st {
-    @apply m-auto my-10;
+    @apply m-auto my-20;
   }
 
   .title-st {
     @apply text-4xl text-center p-20;
   }
+}
+
+/* Swipper */
+.swiper-button-prev,
+.swiper-button-next {
+  color: gray;
 }
