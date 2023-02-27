@@ -1,3 +1,4 @@
+import React, { useRef, useState } from 'react';
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
