@@ -12,7 +12,7 @@ import Img3 from '../assets/img3.jpg';
 // JSX
 export const Slide = () => {
   return (
-    <div className='w-10/12 mx-auto'>
+    <div className='md:w-10/12 mx-auto'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
