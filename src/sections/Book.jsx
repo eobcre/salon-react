@@ -105,7 +105,7 @@ export const Book = () => {
     );
   };
 
-  // Convert to decimal point
+  // Rounds to specified number of decimals
   const getTotalPrice = (price) => {
     return `$${price.toFixed(2)} `;
   };
