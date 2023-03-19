@@ -200,6 +200,7 @@ export const Book = () => {
                         onChange={() => toggle(index)}
                         id={`linked ${index}`}
                         name='services'
+                        value={name}
                       />
                       <label htmlFor={`linked ${index}`} className='p-1'>
                         {name}
