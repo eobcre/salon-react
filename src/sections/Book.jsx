@@ -53,7 +53,7 @@ export const Book = () => {
       }
       return acc;
     }, initialValue);
-  });
+  }, [list]);
 
   // Reset
   const resetForm = () => {
@@ -82,6 +82,7 @@ export const Book = () => {
         console.log(error.text);
       }
     );
+
     e.target.reset();
     resetForm();
 
@@ -188,7 +189,6 @@ export const Book = () => {
           {/* Services */}
           <fieldset className='border border-solid rounded border-gray-300 p-3'>
             <legend className='p-1'>Services</legend>
-
             <ul>
               {list.map(({ name, price, checked }, index) => {
                 return (
