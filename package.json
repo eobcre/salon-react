@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
+    "heroku-postbuild": "npm run build",
+    "start": "serve -s build",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -14,6 +16,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.2",
+    "serve": "^14.2.0",
     "sweetalert2": "^11.7.1",
     "sweetalert2-react-content": "^5.0.7",
     "swiper": "^9.0.5"
