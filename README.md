@@ -9,7 +9,6 @@
 - react-swipeable-views
 - @emailjs/browser
 - sweetalert2
-- Heroku
 
 ## Run Locally
 
