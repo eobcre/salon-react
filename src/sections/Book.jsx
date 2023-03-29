@@ -70,10 +70,10 @@ export const Book = () => {
     e.preventDefault();
 
     EmailJS.sendForm(
-      'service_lkcx1hs',
-      'template_4e36qqj',
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
       e.target,
-      '8amCye5YPJ3JRgePo'
+      process.env.REACT_APP_KEY
     ).then(
       (result) => {
         console.log(result.text);
