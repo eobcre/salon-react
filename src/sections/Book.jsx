@@ -70,10 +70,10 @@ export const Book = () => {
     e.preventDefault();
 
     EmailJS.sendForm(
-      process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
       e.target,
-      process.env.REACT_APP_KEY
+      import.meta.env.VITE_API_KEY
     ).then(
       (result) => {
         console.log(result.text);
