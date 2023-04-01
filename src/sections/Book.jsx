@@ -1,4 +1,6 @@
 import { useState, useMemo } from 'react';
+// utils
+import { priceData } from '../utils/priceData';
 // emailjs
 import EmailJS from '@emailjs/browser';
 // sweetalert2
@@ -8,39 +10,7 @@ import withReactContent from 'sweetalert2-react-content';
 import Image from '../assets/flower.jpg';
 
 export const Book = () => {
-  const [list, setList] = useState([
-    // Service list, set to unchecked
-    {
-      name: 'Haircut',
-      price: 50,
-      checked: false,
-    },
-    {
-      name: 'Color',
-      price: 60,
-      checked: false,
-    },
-    {
-      name: 'Design Color',
-      price: 80,
-      checked: false,
-    },
-    {
-      name: 'Treatment',
-      price: 50,
-      checked: false,
-    },
-    {
-      name: 'Head Spa',
-      price: 50,
-      checked: false,
-    },
-    {
-      name: 'Hair Set',
-      price: 50,
-      checked: false,
-    },
-  ]);
+  const [list, setList] = useState(priceData);
 
   // Calculate
   const total = useMemo(() => {
