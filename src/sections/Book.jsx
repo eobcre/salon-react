@@ -67,12 +67,24 @@ export const Book = () => {
   };
 
   // Checkbox toggle
+  // const toggle = (toggleIndex) => {
+  //   setList((prevState) =>
+  //     prevState.map((listItem, index) => ({
+  //       ...listItem,
+  //       checked: toggleIndex === index ? !listItem.checked : listItem.checked,
+  //     }))
+  //   );
+  // };
+
   const toggle = (toggleIndex) => {
     setList((prevState) =>
-      prevState.map((listItem, index) => ({
-        ...listItem,
-        checked: toggleIndex === index ? !listItem.checked : listItem.checked,
-      }))
+      prevState.map((listItem, index) => {
+        // console.log('listItem:', listItem);
+        return {
+          ...listItem,
+          checked: toggleIndex === index ? !listItem.checked : listItem.checked,
+        };
+      })
     );
   };
 
@@ -171,8 +183,9 @@ export const Book = () => {
                         id={`linked ${index}`}
                         name='services'
                         value={name}
+                        className='h-3 w-3 rounded-full border-2 border-gray-400 appearance-none cursor-pointer checked:bg-gray-400'
                       />
-                      <label htmlFor={`linked ${index}`} className='p-1'>
+                      <label htmlFor={`linked ${index}`} className='p-3'>
                         {name}
                       </label>
                     </div>
