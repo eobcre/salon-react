@@ -75,9 +75,9 @@ export const Header = () => {
               <Link
                 to='/book'
                 onClick={handleToggle}
-                className='border border-gray-300 rounded p-3 hover:bg-gray-300'
+                className='text-white border bg-gray-400 rounded p-3'
               >
-                Book now
+                Booking
               </Link>
             </li>
           </ul>
