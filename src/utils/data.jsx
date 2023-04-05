@@ -1,26 +1,26 @@
 export const data = [
   {
     name: 'Bombshell',
-    src: '../src/assets/gallery/bombshell.jpg',
+    src: '/assets/bombshell.jpg',
   },
   {
     name: 'Ice',
-    src: '../src/assets/gallery/ice.jpg',
+    src: '/assets/ice.jpg',
   },
   {
     name: 'Precision',
-    src: '../src/assets/gallery/precision.jpg',
+    src: '/assets/precision.jpg',
   },
   {
     name: 'Red Berry',
-    src: '../src/assets/gallery/red-berry.jpg',
+    src: '/assets/red-berry.jpg',
   },
   {
     name: 'Soft Brownie',
-    src: '../src/assets/gallery/soft-brownie.jpg',
+    src: '/assets/soft-brownie.jpg',
   },
   {
     name: 'The Blonde',
-    src: '../src/assets/gallery/the-blonde.jpg',
+    src: '/assets/the-blonde.jpg',
   },
 ];
