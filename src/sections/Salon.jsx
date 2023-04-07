@@ -8,15 +8,17 @@ export const Salon = () => {
       <p className='title-st'>Salon</p>
       <div className='md:flex items-start mx-auto mb-10'>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni
-          minus ipsum velit explicabo, suscipit, quis molestias quam assumenda
-          dignissimos placeat soluta. Ratione itaque id unde eius illo repellat
-          ipsum.
+          Cait Salon is a luxurious and stylish hair and beauty salon that
+          offers a range of services to help clients look and feel their best.
+          From haircuts and styling to coloring and treatments, their team of
+          skilled professionals is dedicated to providing personalized services
+          that cater to each client's individual needs.
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni
-          minus ipsum velit explicabo, suscipit, quis molestias quam assumenda
-          dignissimos placeat soluta. Ratione itaque id unde eius illo repellat
-          ipsum.
+          With a relaxing and welcoming atmosphere, clients can sit back and
+          enjoy a pampering experience that leaves them feeling refreshed and
+          rejuvenated. Whether you're in need of a quick trim or a full glam
+          transformation, Cait Salon has everything you need to enhance your
+          natural beauty and leave you feeling confident and beautiful.
         </p>
         <img
           src={Floor}
@@ -28,15 +30,19 @@ export const Salon = () => {
       </div>
       <div className='mt-24 md:flex items-start flex-row-reverse'>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut cum
-          aperiam exercitationem accusamus voluptate ratione, numquam corporis
-          assumenda laudantium soluta minus quo iusto error rerum a itaque ipsam
-          vero impedit.
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          quidem. Nulla earum voluptates repellat porro veritatis. Assumenda
-          ipsam quisquam vitae harum officiis aperiam reprehenderit dolore
-          recusandae itaque. Dolore, molestiae autem.
+          Hair color is a popular way to change up your look and express your
+          personal style. There are countless shades and tones to choose from,
+          ranging from bold and vibrant to subtle and natural-looking. Whether
+          you want to enhance your natural hair color or try something
+          completely new, there's a shade that's perfect for you. Coloring your
+          hair can be a fun and exciting way to experiment with different looks
+          and boost your confidence. However, it's important to take proper care
+          of your colored hair to maintain its health and vibrancy. Regular
+          touch-ups, deep conditioning treatments, and using color-safe products
+          are all important steps to ensure your colored hair looks its best for
+          as long as possible. With the right care and attention, your colored
+          hair can be a beautiful and eye-catching accessory that complements
+          your unique style.
         </p>
         <img
           src={Pink}
