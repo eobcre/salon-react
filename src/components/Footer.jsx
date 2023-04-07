@@ -17,9 +17,9 @@ export const Footer = () => {
         </div>
         <div>
           <p className='text-xl mt-12 mb-6 md:-mt-0'>Contact</p>
-          <p className='mt-2 mb-2'>Call : xxx-xxx-xxx</p>
+          <p className='mt-2 mb-2'>Call : 000-000-000</p>
           <hr className='w-80' />
-          <p className='mt-2 mb-2'>Email : xxx@xxx.com</p>
+          <p className='mt-2 mb-2'>Email : abc@abc.com</p>
           <hr />
         </div>
       </div>
