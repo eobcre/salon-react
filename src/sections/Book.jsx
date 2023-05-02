@@ -66,26 +66,15 @@ export const Book = () => {
     });
   };
 
-  // Checkbox toggle
-  // const toggle = (toggleIndex) => {
-  //   setList((prevState) =>
-  //     prevState.map((listItem, index) => ({
-  //       ...listItem,
-  //       checked: toggleIndex === index ? !listItem.checked : listItem.checked,
-  //     }))
-  //   );
-  // };
-
-  const toggle = (toggleIndex) => {
-    setList((prevState) =>
-      prevState.map((listItem, index) => {
-        // console.log('listItem:', listItem);
-        return {
-          ...listItem,
-          checked: toggleIndex === index ? !listItem.checked : listItem.checked,
-        };
-      })
-    );
+  const handleCheckChange = (e) => {
+    const newData = list.map((data) => {
+      const newDataItem = { ...data };
+      if (newDataItem.name === e.target.value) {
+        newDataItem.checked = !data.checked;
+      }
+      return newDataItem;
+    });
+    setList(newData);
   };
 
   // Rounds to specified number of decimals
@@ -179,7 +168,7 @@ export const Book = () => {
                       <input
                         type='checkbox'
                         checked={checked}
-                        onChange={() => toggle(index)}
+                        onChange={handleCheckChange}
                         id={`linked ${index}`}
                         name='services'
                         value={name}
