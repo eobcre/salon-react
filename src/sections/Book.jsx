@@ -77,7 +77,7 @@ export const Book = () => {
     setList(newData);
   };
 
-  // rounds to specified number of decimals
+  // string format, two demical numeric
   const getTotalPrice = (price) => {
     return `$${price.toFixed(2)} `;
   };
