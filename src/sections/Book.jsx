@@ -1,18 +1,17 @@
+// hooks
 import { useState, useMemo } from 'react';
-// utils
-import { priceData } from '../utils/priceData';
-// emailjs
+// libraries
 import EmailJS from '@emailjs/browser';
-// sweetalert2
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-// img
+// other files
+import { priceData } from '../utils/priceData';
 import Image from '../assets/flower.jpg';
 
 export const Book = () => {
   const [list, setList] = useState(priceData);
 
-  // Calculate
+  // calculate logic
   const total = useMemo(() => {
     // console.log('%cuseMemo Render', 'color: green');
     const initialValue = 0;
@@ -25,7 +24,7 @@ export const Book = () => {
     }, initialValue);
   }, [list]);
 
-  // Reset
+  // reset logic
   const resetForm = () => {
     setList((prevState) =>
       prevState.map((listItem) => ({
@@ -35,7 +34,7 @@ export const Book = () => {
     );
   };
 
-  // Email JS
+  // email-js
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -56,7 +55,7 @@ export const Book = () => {
     e.target.reset();
     resetForm();
 
-    // Alert
+    // sweet-alert2
     const MySwal = withReactContent(Swal);
 
     MySwal.fire({
@@ -66,6 +65,7 @@ export const Book = () => {
     });
   };
 
+  // onChange logic
   const handleCheckChange = (e) => {
     const newData = list.map((data) => {
       const newDataItem = { ...data };
@@ -77,12 +77,11 @@ export const Book = () => {
     setList(newData);
   };
 
-  // Rounds to specified number of decimals
+  // rounds to specified number of decimals
   const getTotalPrice = (price) => {
     return `$${price.toFixed(2)} `;
   };
 
-  // JSX
   return (
     <>
       <p className='title-st'>Booking</p>
@@ -93,7 +92,7 @@ export const Book = () => {
       </p>
       <div className='mx-2 md:flex justify-between md:mx-36'>
         <form onSubmit={sendEmail} required>
-          {/* Name */}
+          {/* name */}
           <fieldset className='border border-solid rounded border-gray-300 p-3'>
             <legend className='p-1'>Name</legend>
             <input
@@ -106,7 +105,7 @@ export const Book = () => {
             />
           </fieldset>
 
-          {/* Number */}
+          {/* number */}
           <fieldset className='border border-solid rounded border-gray-300 p-3'>
             <legend className='p-1'>Number</legend>
             <input
@@ -121,7 +120,7 @@ export const Book = () => {
             />
           </fieldset>
 
-          {/* Email */}
+          {/* email */}
           <fieldset className='border border-solid rounded border-gray-300 p-3'>
             <legend className='p-1'>Email</legend>
             <input
@@ -134,7 +133,7 @@ export const Book = () => {
             />
           </fieldset>
 
-          {/* Location */}
+          {/* location */}
           <fieldset className='border border-solid rounded border-gray-300 p-3'>
             <legend className='p-1'>Salon Location</legend>
             <select
@@ -149,7 +148,7 @@ export const Book = () => {
             </select>
           </fieldset>
 
-          {/* Date */}
+          {/* date */}
           <fieldset className='border border-solid rounded border-gray-300 p-3'>
             <legend className='p-1'>Date</legend>
             <div className='text-gray-500'>
@@ -157,7 +156,7 @@ export const Book = () => {
             </div>
           </fieldset>
 
-          {/* Services */}
+          {/* services */}
           <fieldset className='border border-solid rounded border-gray-300 p-3'>
             <legend className='p-1'>Services</legend>
             <ul>
@@ -185,7 +184,7 @@ export const Book = () => {
             </ul>
           </fieldset>
 
-          {/* Total Label */}
+          {/* total label */}
           <fieldset className='flex justify-between p-8'>
             <label htmlFor='total'>Price</label>
             <input
@@ -197,7 +196,7 @@ export const Book = () => {
             />
           </fieldset>
 
-          {/* Send button */}
+          {/* send button */}
           <button
             className='table mx-auto border border-gray-300 rounded mt-4 px-6 py-1 hover:bg-gray-300'
             type='submit'
@@ -206,7 +205,7 @@ export const Book = () => {
           </button>
         </form>
 
-        {/* Image */}
+        {/* img */}
         <div className='shrink-0'>
           <img
             src={Image}
