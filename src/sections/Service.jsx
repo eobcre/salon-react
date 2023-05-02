@@ -3,7 +3,7 @@ export const Service = () => {
     <div>
       <p className='title-st'>Service</p>
       <div className='mx-auto md:w-3/4'>
-        {/* Haircut */}
+        {/* haircut list */}
         <div className='p-10'>
           <p className='text-2xl font-bold mb-6'>Haircut</p>
           <ul>
@@ -32,7 +32,7 @@ export const Service = () => {
 
         <hr />
 
-        {/* Color */}
+        {/* color list */}
         <div className='p-10'>
           <p className='text-2xl font-bold mb-6'>Color</p>
           <ul>

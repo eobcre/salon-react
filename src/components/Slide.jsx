@@ -1,5 +1,6 @@
+// hooks
 import React, { useRef, useState } from 'react';
-// Swiper
+// libraries
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/css';
@@ -9,7 +10,6 @@ import Img1 from '../assets/img1.jpg';
 import Img2 from '../assets/img2.jpg';
 import Img3 from '../assets/img3.jpg';
 
-// JSX
 export const Slide = () => {
   return (
     <div className='md:w-10/12 mx-auto'>

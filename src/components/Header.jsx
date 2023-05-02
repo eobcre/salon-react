@@ -1,6 +1,7 @@
+// hooks
 import { useState } from 'react';
+// libraries
 import { Link } from 'react-router-dom';
-// react-icons
 import { GrClose, GrMenu } from 'react-icons/gr';
 // img
 import Logo from '../assets/logo.png';
@@ -12,7 +13,6 @@ export const Header = () => {
     setNavOpen(!navOpen);
   };
 
-  // JSX
   return (
     <nav>
       <div className='m-auto border-b border-gray-200 p-10 md:w-10/12 md:flex justify-between items-center'>
@@ -20,7 +20,7 @@ export const Header = () => {
           <Link to='/'>
             <img src={Logo} alt='Logo' width='180' height='29' />
           </Link>
-          {/* Toggle button */}
+          {/* mobile menu toggle button */}
           <button onClick={handleToggle} className='md:hidden'>
             {navOpen ? (
               <GrClose className='text-2xl' />
