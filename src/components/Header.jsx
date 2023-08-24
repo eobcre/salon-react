@@ -6,6 +6,8 @@ import { GrClose, GrMenu } from 'react-icons/gr';
 // img
 import Logo from '../assets/logo.png';
 
+import { menuData } from '../utils/menuData';
+
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -35,51 +37,17 @@ export const Header = () => {
           }`}
         >
           <ul className='grid grid-cols-2 place-items-center gap-4 md:flex'>
-            <li>
-              <Link
-                to='/'
-                onClick={handleToggle}
-                className='hover:opacity-50 md:p-4'
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to='/salon'
-                onClick={handleToggle}
-                className='hover:opacity-50'
-              >
-                Salon
-              </Link>
-            </li>
-            <li>
-              <Link
-                to='/service'
-                onClick={handleToggle}
-                className='hover:opacity-50 md:p-4'
-              >
-                Service
-              </Link>
-            </li>
-            <li>
-              <Link
-                to='/gallery'
-                onClick={handleToggle}
-                className='hover:opacity-50 md:pr-4'
-              >
-                Gallery
-              </Link>
-            </li>
-            <li className='mt-2 md:mt-0'>
-              <Link
-                to='/book'
-                onClick={handleToggle}
-                className='border border-black rounded p-3 hover:text-white hover:bg-black'
-              >
-                Booking
-              </Link>
-            </li>
+            {menuData.map((menu) => (
+              <li key={menu.id}>
+                <Link
+                  to={menu.link}
+                  onClick={handleToggle}
+                  className='hover:opacity-50 md:p-4'
+                >
+                  {menu.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
