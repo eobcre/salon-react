@@ -6,9 +6,6 @@ module.exports = {
       fontFamily: {
         shadow: ['Shadows Into Light', 'cursive'],
       },
-      margin: {
-        '15px': '15px',
-      },
     },
   },
   plugins: [],
