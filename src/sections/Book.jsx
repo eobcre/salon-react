@@ -160,24 +160,24 @@ export const Book = () => {
           <fieldset className='border border-solid rounded border-gray-300 p-3'>
             <legend className='p-1'>Services</legend>
             <ul>
-              {list.map(({ name, price, checked }, index) => {
+              {list.map((data, index) => {
                 return (
                   <li key={index} className='flex justify-between'>
                     <div className='p-1'>
                       <input
                         type='checkbox'
-                        checked={checked}
+                        checked={data.checked}
                         onChange={handleCheckChange}
                         id={`linked ${index}`}
                         name='services'
-                        value={name}
+                        value={data.name}
                         className='h-3 w-3 rounded-full border-2 border-gray-400 appearance-none cursor-pointer checked:bg-gray-400'
                       />
                       <label htmlFor={`linked ${index}`} className='p-3'>
-                        {name}
+                        {data.name}
                       </label>
                     </div>
-                    <div>{getTotalPrice(price)}</div>
+                    <div>{getTotalPrice(data.price)}</div>
                   </li>
                 );
               })}
