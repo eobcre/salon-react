@@ -17,10 +17,7 @@ export const Book = () => {
     const initialValue = 0;
     return list.reduce((acc, cur) => {
       // console.log('acc', acc, 'cur', cur);
-      if (cur.checked === true) {
-        acc += cur.price;
-      }
-      return acc;
+      return cur.checked === true ? (acc += cur.price) : acc;
     }, initialValue);
   }, [list]);
 
